@@ -28,7 +28,13 @@ import { AbstractInputComponent } from '../abstract-input'
 })
 export class TextComponent extends AbstractInputComponent<string> {
   @Input()
-  autocomplete: string
+  autocomplete: string = 'off'
+
+  @Input()
+  autocorrect: string = 'off'
+
+  @Input()
+  spellcheck: string = 'false'
 
   @Input()
   placeholder: string = ''
